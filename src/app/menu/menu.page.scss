@@ -1,0 +1,74 @@
+// Variables para colores y diseño
+$primary-color: #4caf50; // Verde
+$warning-color: #ffc107; // Amarillo
+$dark-color: #333333; // Negro/gris oscuro
+$text-color: #ffffff; // Blanco
+$background-light: #f4f4f4; // Fondo claro
+
+// Fondo general
+ion-content {
+  background: $background-light;
+}
+
+// Contenedor del menú
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 1rem; // Espaciado entre las opciones del menú
+}
+
+// Encabezado del menú
+.menu-header {
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1rem;
+    color: lighten($dark-color, 20%);
+  }
+}
+
+// Opciones del menú
+.menu-option {
+  width: 80%; // Ajustar ancho de las tarjetas
+  max-width: 300px;
+  border-radius: 12px; // Bordes redondeados
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra suave
+
+  ion-card-header {
+    text-align: center;
+    padding: 1rem;
+
+    ion-card-title {
+      color: $text-color;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+
+  // Efecto hover para cada tarjeta
+  &:hover {
+    transform: scale(1.05); // Ampliar ligeramente al pasar el cursor
+    transition: transform 0.2s ease-in-out;
+  }
+
+  // Colores específicos para cada opción
+  &[color="primary"] {
+    background: $primary-color;
+  }
+
+  &[color="warning"] {
+    background: $warning-color;
+  }
+
+  &[color="dark"] {
+    background: $dark-color;
+  }
+}

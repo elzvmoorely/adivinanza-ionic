@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/menu" text="Volver"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Tabla de Posiciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-list inset="true" mode="ios" class="leaderboard-list">
+    <ion-item *ngFor="let player of players; let i = index" class="leaderboard-item">
+      <ion-text color="primary" class="position">
+        <h3>{{ i + 1 }}</h3>
+      </ion-text>
+      <ion-label class="details">
+        <strong>{{ player.usuario }}</strong>
+        <p>Partidas jugadas: {{ player.partidas_jugadas }}</p>
+      </ion-label>
+      <ion-note slot="end" class="points">
+        {{ player.puntos }}
+      </ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

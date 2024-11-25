@@ -1,0 +1,94 @@
+// Variables para colores y fuentes
+$primary-color: #4caf50; // Verde
+$secondary-color: #3f51b5; // Azul
+$background-color: #f9f9f9; // Fondo claro
+$text-color: #333; // Texto oscuro
+$input-background: #ffffff; // Fondo de inputs
+
+// Fondo general
+ion-content {
+  background: $background-color;
+}
+
+// Contenedor principal
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+}
+
+// Tarjeta de inicio de sesión
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: $input-background;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  ion-card-title {
+    font-size: 1.5rem;
+    color: $primary-color;
+    margin-bottom: 0.5rem;
+  }
+
+  ion-card-subtitle {
+    font-size: 1rem;
+    color: $secondary-color;
+    margin-bottom: 1rem;
+  }
+
+  ion-card-content {
+    padding: 1.5rem;
+  }
+}
+
+// Estilo de los campos de entrada
+.input-item {
+  background: $input-background;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+
+  ion-label {
+    font-size: 0.9rem;
+    color: $text-color;
+  }
+
+  ion-input {
+    font-size: 1rem;
+  }
+}
+
+// Botón de inicio de sesión
+.login-button {
+  background: $primary-color;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+
+  &:hover {
+    background: darken($primary-color, 10%);
+  }
+}
+
+// Enlace para registrarse
+.register-link {
+  text-align: center;
+  margin-top: 1rem;
+
+  ion-label {
+    font-size: 0.9rem;
+    color: $text-color;
+
+    a {
+      color: $secondary-color;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
